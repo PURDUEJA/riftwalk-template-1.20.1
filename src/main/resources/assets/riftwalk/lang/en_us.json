@@ -1,3 +1,5 @@
 {
-  "item.riftwalk.riftshard": "Riftshard"
+  "item.riftwalk.riftshard": "Riftshard",
+
+  "itemgroup.riftshard": "Riftwalk Items"
 }
