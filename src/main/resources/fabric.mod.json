@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "riftwalk",
+	"version": "${version}",
+	"name": "riftwalk",
+	"description": "This is a mod I'm working on to learn some skills. Hopefully I don't give up on it.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/riftwalk/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mop.riftwalk.Riftwalk"
+		],
+		"client": [
+			"net.mop.riftwalk.RiftwalkClient"
+		],
+		"fabric-datagen": [
+			"net.mop.riftwalk.RiftwalkDataGenerator"
+		]
+	},
+	"mixins": [
+		"riftwalk.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
