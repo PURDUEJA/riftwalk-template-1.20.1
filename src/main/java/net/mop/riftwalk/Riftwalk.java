@@ -2,6 +2,12 @@ package net.mop.riftwalk;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.GenerationStep;
 import net.mop.riftwalk.block.ModBlocks;
 import net.mop.riftwalk.item.ModItemGroups;
 import net.mop.riftwalk.item.ModItems;
@@ -23,5 +29,17 @@ public class Riftwalk implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+
+
+        // Register ore generation
+        BiomeModifications.addFeature(
+                // Select only End biomes
+                BiomeSelectors.foundInTheEnd(),
+                // Use the UNDERGROUND_ORES generation step
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                // Your placed feature registry key
+                RegistryKey.of(RegistryKeys.PLACED_FEATURE,
+                        new Identifier("riftwalk", "rift_ore"))
+        );
     }
 }

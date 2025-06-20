@@ -14,7 +14,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.mop.riftwalk.Riftwalk;
 
 public class ModBlocks {
-    public static final Block RIFT_ORE = registerBlock("rift_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE), UniformIntProvider.create(10, 15)));
+    public static final Block RIFT_ORE = registerBlock("rift_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).resistance(1200.0f), UniformIntProvider.create(20, 30)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
