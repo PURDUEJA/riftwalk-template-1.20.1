@@ -8,17 +8,22 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.mop.riftwalk.Riftwalk;
+import net.mop.riftwalk.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup RIFTWALK = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Riftwalk.MOD_ID, "riftshard"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.riftshard"))
                     .icon(() -> new ItemStack(ModItems.RIFTSHARD)).entries((displayContext, entries) -> {
-                    // add items to the group in here.
-                    entries.add(ModItems.RIFTSHARD);
+                        // add items to the group in here.
+                        //Items
+                        entries.add(ModItems.RIFTSHARD);
+                        entries.add(ModItems.RIFT_FRAGMENT);
+
+                        //Blocks
+                        entries.add(ModBlocks.RIFT_ORE);
 
                     }).build());
-
 
 
     public static void registerItemGroups() {

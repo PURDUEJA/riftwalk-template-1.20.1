@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "riftwalk:item/riftshard"
+    "layer0": "riftwalk:item/rift_fragment"
   }
 }

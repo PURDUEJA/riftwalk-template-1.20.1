@@ -1,5 +1,8 @@
 {
   "item.riftwalk.riftshard": "Riftshard",
+  "item.riftwalk.rift_fragment": "Rift Fragment",
+
+  "block.riftwalk.rift_ore": "Rift Ore",
 
   "itemgroup.riftshard": "Riftwalk Items"
 }

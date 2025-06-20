@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+    "textures": {
+        "all": "riftwalk:block/rift_ore"
+    }
+}

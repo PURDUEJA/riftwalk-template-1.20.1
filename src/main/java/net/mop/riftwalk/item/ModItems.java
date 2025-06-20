@@ -12,9 +12,11 @@ import net.mop.riftwalk.Riftwalk;
 
 public class ModItems {
     public static final Item RIFTSHARD = registerItem("riftshard", new Item(new FabricItemSettings()));
+    public static final Item RIFT_FRAGMENT = registerItem("rift_fragment", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(RIFTSHARD);
+        entries.add(RIFT_FRAGMENT);
     }
 
     private static Item registerItem(String name, Item item) {
