@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "riftwalk:riftshard"
+    }
+  ],
+    "result": {
+        "item": "riftwalk:rift_fragment",
+        "count": 9
+    }
+}
