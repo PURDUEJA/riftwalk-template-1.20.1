@@ -25,6 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RIFT_CHESTPLATE);
                         entries.add(ModItems.RIFT_LEGGINGS);
                         entries.add(ModItems.RIFT_BOOTS);
+                        entries.add(ModItems.RIFT_UPGRADE_SMITHING_TEMPLATE);
 
                         //Blocks
                         entries.add(ModBlocks.RIFT_ORE);

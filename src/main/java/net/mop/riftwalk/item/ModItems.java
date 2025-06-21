@@ -3,14 +3,15 @@ package net.mop.riftwalk.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.mop.riftwalk.Riftwalk;
+
+import java.util.List;
 
 public class ModItems {
     public static final Item RIFTSHARD = registerItem("riftshard", new Item(new FabricItemSettings()));
@@ -20,7 +21,6 @@ public class ModItems {
             new RiftbladeItem(ModToolMaterials.RIFT, 4, -2.4f, new FabricItemSettings()));
 
 
-        // Existing items...
 
         // Rift Armor
         public static final Item RIFT_HELMET = registerItem("rift_helmet",
@@ -34,6 +34,32 @@ public class ModItems {
 
         public static final Item RIFT_BOOTS = registerItem("rift_boots",
                 new RiftArmorItem(ModArmorMaterials.RIFT, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+
+    public static final Item RIFT_UPGRADE_SMITHING_TEMPLATE = registerItem("rift_upgrade_smithing_template",
+            new SmithingTemplateItem(
+                    Text.translatable("item.riftwalk.rift_upgrade_smithing_template.applies_to").formatted(Formatting.BLUE),
+                    Text.translatable("item.riftwalk.rift_upgrade_smithing_template.ingredients").formatted(Formatting.BLUE),
+                    Text.translatable("item.riftwalk.rift_upgrade_smithing_template.title").formatted(Formatting.GRAY),
+                    Text.translatable("item.riftwalk.rift_upgrade_smithing_template.base_slot_description"),
+                    Text.translatable("item.riftwalk.rift_upgrade_smithing_template.additions_slot_description"),
+                    getArmorBaseSlotTextures(),
+                    getRiftIngredientSlotTextures()
+            ));
+
+    // Helper methods for armor-only smithing template
+    private static List<Identifier> getArmorBaseSlotTextures() {
+        return List.of(
+                new Identifier("item/empty_armor_slot_helmet"),
+                new Identifier("item/empty_armor_slot_chestplate"),
+                new Identifier("item/empty_armor_slot_leggings"),
+                new Identifier("item/empty_armor_slot_boots")
+        );
+    }
+
+    private static List<Identifier> getRiftIngredientSlotTextures() {
+        return List.of(new Identifier("riftwalk:item/empty_slot_riftshard"));
+    }
 
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {

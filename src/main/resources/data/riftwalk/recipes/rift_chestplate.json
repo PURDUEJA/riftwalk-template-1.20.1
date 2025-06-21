@@ -7,7 +7,7 @@
     "item": "riftwalk:riftshard"
   },
   "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
+    "item": "riftwalk:rift_upgrade_smithing_template"
   },
   "result": {
     "item": "riftwalk:rift_chestplate"
