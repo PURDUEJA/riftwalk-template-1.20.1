@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "RRR",
+    " S "
+  ],
+  "key": {
+    "R": {
+      "item": "riftwalk:riftshard"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "riftwalk:riftblade"
+  }
+}

@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=false": {
       "model": "riftwalk:block/rift_ore"
+    },
+    "lit=true": {
+      "model": "riftwalk:block/rift_ore_lit"
     }
   }
 }

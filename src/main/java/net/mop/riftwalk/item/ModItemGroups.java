@@ -19,6 +19,7 @@ public class ModItemGroups {
                         //Items
                         entries.add(ModItems.RIFTSHARD);
                         entries.add(ModItems.RIFT_FRAGMENT);
+                        entries.add(ModItems.RIFTBLADE);
 
                         //Blocks
                         entries.add(ModBlocks.RIFT_ORE);

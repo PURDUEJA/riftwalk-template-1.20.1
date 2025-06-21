@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -14,9 +15,13 @@ public class ModItems {
     public static final Item RIFTSHARD = registerItem("riftshard", new Item(new FabricItemSettings()));
     public static final Item RIFT_FRAGMENT = registerItem("rift_fragment", new Item(new FabricItemSettings()));
 
+    public static final Item RIFTBLADE = registerItem("riftblade",
+            new RiftbladeItem(ModToolMaterials.RIFT, 4, -2.4f, new FabricItemSettings()));
+
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(RIFTSHARD);
         entries.add(RIFT_FRAGMENT);
+        entries.add(RIFTBLADE);
     }
 
     private static Item registerItem(String name, Item item) {

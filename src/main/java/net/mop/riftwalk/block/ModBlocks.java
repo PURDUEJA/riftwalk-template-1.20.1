@@ -4,17 +4,23 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.mop.riftwalk.Riftwalk;
 
 public class ModBlocks {
-    public static final Block RIFT_ORE = registerBlock("rift_ore", new ExperienceDroppingBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE).resistance(1200.0f), UniformIntProvider.create(20, 30)));
+    public static final Block RIFT_ORE = registerBlock("rift_ore",
+            new RiftOreBlock(FabricBlockSettings.copyOf(Blocks.IRON_ORE)
+                    .resistance(1200.0f)
+                    .luminance(state -> state.get(RiftOreBlock.LIT) ? 9 : 0) // Add light when lit
+                    .sounds(BlockSoundGroup.STONE)
+                    .requiresTool()
+                    .strength(4.0f)
+            ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

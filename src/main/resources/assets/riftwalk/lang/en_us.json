@@ -1,6 +1,9 @@
 {
   "item.riftwalk.riftshard": "Riftshard",
   "item.riftwalk.rift_fragment": "Rift Fragment",
+  "item.riftwalk.riftblade": "Riftblade",
+  "item.riftwalk.riftblade.cooldown": "Riftblade is on cooldown",
+
 
   "block.riftwalk.rift_ore": "Rift Ore",
 
