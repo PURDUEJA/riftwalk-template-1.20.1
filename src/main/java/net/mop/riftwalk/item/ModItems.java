@@ -3,6 +3,7 @@ package net.mop.riftwalk.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.SwordItem;
@@ -17,6 +18,23 @@ public class ModItems {
 
     public static final Item RIFTBLADE = registerItem("riftblade",
             new RiftbladeItem(ModToolMaterials.RIFT, 4, -2.4f, new FabricItemSettings()));
+
+
+        // Existing items...
+
+        // Rift Armor
+        public static final Item RIFT_HELMET = registerItem("rift_helmet",
+                new RiftArmorItem(ModArmorMaterials.RIFT, ArmorItem.Type.HELMET, new FabricItemSettings()));
+
+        public static final Item RIFT_CHESTPLATE = registerItem("rift_chestplate",
+                new RiftArmorItem(ModArmorMaterials.RIFT, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+
+        public static final Item RIFT_LEGGINGS = registerItem("rift_leggings",
+                new RiftArmorItem(ModArmorMaterials.RIFT, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+
+        public static final Item RIFT_BOOTS = registerItem("rift_boots",
+                new RiftArmorItem(ModArmorMaterials.RIFT, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(RIFTSHARD);

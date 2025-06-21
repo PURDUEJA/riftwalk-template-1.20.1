@@ -4,6 +4,13 @@
   "item.riftwalk.riftblade": "Riftblade",
   "item.riftwalk.riftblade.cooldown": "Riftblade is on cooldown",
 
+  "item.riftwalk.rift_helmet": "Rift Helmet",
+  "item.riftwalk.rift_chestplate": "Rift Chestplate",
+  "item.riftwalk.rift_leggings": "Rift Leggings",
+  "item.riftwalk.rift_boots": "Rift Boots",
+
+  "key.category.riftwalk": "Riftwalk",
+  "key.riftwalk.dimension_travel": "Dimensional Travel",
 
   "block.riftwalk.rift_ore": "Rift Ore",
 

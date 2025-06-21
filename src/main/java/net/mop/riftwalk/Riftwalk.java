@@ -11,6 +11,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.mop.riftwalk.block.ModBlocks;
 import net.mop.riftwalk.item.ModItemGroups;
 import net.mop.riftwalk.item.ModItems;
+import net.mop.riftwalk.networking.ModMessages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,5 +42,7 @@ public class Riftwalk implements ModInitializer {
                 RegistryKey.of(RegistryKeys.PLACED_FEATURE,
                         new Identifier("riftwalk", "rift_ore"))
         );
+
+        ModMessages.registerC2SPackets();
     }
 }

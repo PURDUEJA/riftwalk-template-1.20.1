@@ -21,6 +21,11 @@ public class ModItemGroups {
                         entries.add(ModItems.RIFT_FRAGMENT);
                         entries.add(ModItems.RIFTBLADE);
 
+                        entries.add(ModItems.RIFT_HELMET);
+                        entries.add(ModItems.RIFT_CHESTPLATE);
+                        entries.add(ModItems.RIFT_LEGGINGS);
+                        entries.add(ModItems.RIFT_BOOTS);
+
                         //Blocks
                         entries.add(ModBlocks.RIFT_ORE);
 
